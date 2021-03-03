@@ -9,7 +9,8 @@ def index():
     View root page function that returns the index page and its data
     '''
     News = 'Welcome to Pizza World'
-    return render_template('index.html')
+    comment ='Where you get the best from Us'
+    return render_template('index.html',News= News,comment = comment)
 
 @app.route('/pizza/<int:pizza_id>')
 def pizza(pizza_id):
