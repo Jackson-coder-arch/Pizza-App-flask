@@ -1,0 +1,403 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 60px 0 60px;
+}
+
+.overlay {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(10, 10, 10, 0.3);
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+    height: 100px;
+    background: url(/css/footer.webp); 
+} 
+nav li {
+    list-style: none;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  nav li span {
+      padding-left: 5px;
+  }
+  li a {
+      padding: 5px;
+      background-color: #fff;
+      text-decoration: none;
+  }
+  .cart ion-icon {
+      vertical-align: bottom;
+      font-size: 20px;
+      padding-right: 5px;
+  }
+  .cart a {
+        background-color: brown;
+        color: wheat;
+        cursor: pointer;
+        text-decoration: none;
+  } 
+  .container {
+    background-image: url(/css/zoom.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 0%;
+    font-size: large;
+    color: white;
+}
+.img {
+    margin-right: 20px;
+    margin-left: 20px;
+    position: relative;
+    overflow: hidden;
+    }
+
+
+h1 {
+    color: brown;
+    text-align: center;
+}
+h2 {
+    color: thistle;
+    font-size: x-large;
+}
+body {
+    background-color: wheat;
+    margin: 5%;
+    margin-top: 0%;
+
+}
+
+.container>img {
+    width: 100%;
+}
+header {
+    display: inline-flex;
+}
+#About {
+    background: url(/css/big.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: whitesmoke;
+    font-size: xx-large;
+    border: solid green;
+    text-align: center;
+}
+  .container,
+  
+  .products-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 50px;
+      scroll-padding-bottom: 100px;
+      text-align: center;
+  } 
+  .order-now {
+      position: absolute;
+      width: 100%;
+      background-color: blanchedalmond;
+      transition: all 0.3s ease-in-out;
+      opacity: 0;
+      cursor: pointer;
+      text-align: center;
+      text-overflow: clip;
+      text-shadow: teal;
+  }
+  .img:hover .order1,
+  .img:hover .order2,
+  .img:hover .order3,
+  .img:hover .order4,
+  .img:hover .order5,
+  .img:hover .order6,
+  .img:hover .order7,
+  .img:hover .order8,
+  .img:hover .order9 {
+      bottom: 50px;
+      opacity: 1;
+      padding: 10px;
+      text-decoration: none;
+  }
+  #welcome {
+      background-color: rgb(26, 1, 1);
+      text-align: center;
+      font-size: xx-large;
+      border-radius: 30%;
+      color: whitesmoke
+  }
+  .footer {
+      color: white;
+      font-size: x-large;
+      background: url(./big.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      text-align: end;
+  }
+  .product {
+    background-color: rgba(10, 10, 10, 0.3);
+    text-align: center;
+    font-size: large;
+    max-width: 650px;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  .products-container  {
+    background-color: rgba(10, 10, 10, 0.3);
+    text-align: center;
+    font-size: large;
+    max-width: 650px;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  .products-container ion-icon {
+    font-size: 25px;
+    color: blue;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+  } 
+  .product-header {
+      width: 100%;
+      max-width: 650px;
+      display: flex;
+      justify-content: flex-start;
+      border-bottom: 4px solid gold brown;
+      margin: 0 auto;
+  }
+  .product-title {
+      width: 45%;
+  }
+  .price {
+    width: 15%;
+    border-bottom: 1px solid brown;
+    display: flex;
+    align-items: center;
+  }
+  .quantity {
+      width: 30%;
+      border-bottom: 1px solid brown;
+      display: flex;
+      align-items: center;
+  }
+  .total {
+    width: 10%;
+    border-bottom: 1px solid brown;
+    display: flex;
+    align-items: center;
+  }
+  .product {
+      width: 45%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 4px solid brown;
+  }
+  .basketTotalContainer {
+      display: flex;
+      justify-content: flex-end;
+      width: 100px;
+      padding: 10px 0;
+  }
+  .basketTotalTitle {
+      width: 30%;
+  }
+  .basketTotal {
+      width: 10px;
+  }
+  .order-box {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: url(/css/HD.jpeg);
+      z-index: 99999;
+      transition: 0.2s linear;
+      transform: scale(0);
+  }
+  .order-box.active {
+      transform: scale(2);
+  }
+ .order .order-box  {
+      position: relative;
+      height: 70%;
+      width: 80%;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+
+
+  i {
+      color: yellow;
+  }
+/* 
+trials */
+
+  /* .overlay{
+	position: relative;
+	height: 100vh;
+	width: 100%;
+}
+    header .overlay {
+	position: relative;
+	height: 15vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('https://images.pexels.com/photos/1486222/pexels-photo-1486222.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+	background-size: cover;
+	background-position: center center;
+	font-size: 1.5rem;
+	color: #fff;
+	text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+    header .overlay .order{
+	cursor: pointer;
+	z-index: 1;
+	position: relative;
+	font-size: 1.8rem;
+}
+    header .overlay .order span{
+	position: absolute;
+	top: -5px;
+	right: -12px;
+	font-size: 0.69rem;
+	background-color: #000;
+	padding: 5px 5px;
+	border-radius: 50%;
+} */
+/*items*/
+/* .main .itemsBox{
+	position: relative;
+	height: calc(100% - 15vh);
+	width: 90%;
+	margin:0 auto;
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-gap: 10px;
+	padding: 50px 25px;
+}
+.main .itemsBox .item{
+	position: relative;
+	height: 400px;
+	width: 100%;
+	overflow: hidden;
+	padding: 10px 25px;
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
+.main .itemsBox .item img{
+	position: relative;
+	width: 100%;
+	height: 60%;
+	object-fit: contain;
+}
+.main .itemsBox .item h1{
+	position: relative;
+	width: 100%;
+	text-align: center;
+	font-size: 1.2rem;
+	font-weight: lighter;
+	padding: 10px 0;
+}
+.main .itemsBox .item p{
+	position: relative;
+	width: 100%;
+	text-align: right;
+	font-size: 1.2rem;
+	font-weight: lighter;
+	padding: 10px 0;
+	color: #017bf5;
+}
+.main .itemsBox .item a{
+	position: relative;
+	text-align: left;
+	font-size: 1.2rem;
+	font-weight: lighter;
+	padding: 10px 0;
+	background: #0f0f0f;
+	text-decoration: none;
+	color: #fff;
+	padding: 10px 15px;
+	text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
+.main .itemsBox .item a:hover{
+	background: #0f0f0fa5;
+}
+*/
+.orderBox{
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 99999;
+	transition: 0.3s linear;
+	transform: scale(0.5);
+}
+.orderBox.active{
+	transform: scale(2);
+}
+.orderBox .order{
+	position: relative;
+	height: 70%;
+	width: 80%;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.orderBox .order span{
+	position: absolute;
+	right: 0;
+	top: 0;
+	background:#f00;
+	padding:10px 15px;
+	color: #fff;
+	cursor: pointer;
+}
+.orderBox .order span:hover{
+	background: #ff0000a5;
+}
+.orderBox .order h1{
+	position: relative;
+	margin-top: 2%;
+	font-size: 2.8rem;
+	color: #017bf5;
+}
+.products-container{
+    padding-top: 100px;
+}
