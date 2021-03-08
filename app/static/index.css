@@ -3,6 +3,9 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.home{
+  padding-top: 50%;
+}
 
 
 ul {

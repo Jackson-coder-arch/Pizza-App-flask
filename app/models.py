@@ -8,10 +8,10 @@ from datetime import datetime
 class User(UserMixin,db.Model):
     __tablename__ = 'users'
     id = db.Column(db.Integer,primary_key = True)
+    pass_secure= db.Column(db.String(255))
     username = db.Column(db.String(255),index = True)
     email = db.Column(db.String(255),unique = True,index = True)
     order = db.relationship('Order',backref = 'user',lazy="dynamic")
-    # comments = db.relationship('Comment',backref = 'user',lazy="dynamic")
 
 
     @property
@@ -41,8 +41,13 @@ class Order(db.Model):
     __tablename__ = 'orders'
 
     id = db.Column(db.Integer,primary_key = True)
-    title =  db.Column(db.String(255)) 
-    category = db.Column(db.String(255))
+    email =  db.Column(db.String(255)) 
+    flavor = db.Column(db.String(255))
+    size = db.Column(db.String(255))
+    crust = db.Column(db.String(255))
+    toppings = db.Column(db.String(255))
+    delivery = db.Column(db.String(255))
+    no_of_pizzas =db.Column(db.Integer)
     user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
     # comments = db.relationship('Comment',backref = 'pitch',lazy="dynamic")
 

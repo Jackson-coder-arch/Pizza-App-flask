@@ -8,12 +8,12 @@ from wtforms import SelectField,IntegerField
 
 class OrderForm(FlaskForm):
     email = StringField('Enter email to recieve reciept', validators=[Required(), Email()] )
-    flavor= SelectField('Pizza Type',choices=[('Hawaiian'),('Pepperoni'),('BBQ-chicken'),('Buffalo'),('Margherita')],validators=[Required()])
-    crust =SelectField('Crust', choose=[('Stuffed'),('Thick'),('Cripsy'),('Gluten')])
-    size = SelectField('Choose Pizza size', choices = [('Large'), ('Medium'), ('Small')],validators=[Required()])    
-    toppings = SelectField('Choose toppings', choices = [('onions'),('Mushroom'),('Cheese'),('Radichio'),('Bacon')],validators=[Required()])
+    flavor= SelectField('Pizza Type',choices=[('Hawaiian','Hawaiian'),('Pepperoni','Pepperoni'),('BBQ-chicken','BBQ-chicken'),('Buffalo','Buffalo'),('Margherita','Margherita')],validators=[Required()])
+    crust =SelectField('Crust', choices=[('Stuffed','Stuffed'),('Thick','Thick'),('Cripsy','Cripsy'),('Gluten', 'Gluten')])
+    size = SelectField('Choose Pizza size', choices = [('Large','Large'), ('Medium','Medium'), ('Small','Small')],validators=[Required()])    
+    toppings = SelectField('Choose toppings', choices = [('Onions','Onions'),('Mushroom','Mushroom'),('Cheese','Cheese'),('Radichio','Radichio'),('Bacon','Bacon')],validators=[Required()])
     no_of_pizzas = IntegerField('Enter number of pizzas', validators=[Required()])
-    delivery = SelectField('Choose',option=[('Delivery'),('Collection')],validators=[Required()] )
+    delivery = SelectField('Choose', choices=[('Delivery','Delivery'),('Collection','Collection')],validators=[Required()] )
     submit = SubmitField('Order Now')
     
 

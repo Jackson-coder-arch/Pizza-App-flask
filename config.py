@@ -6,7 +6,10 @@ class Config:
 
     
     SECRET_KEY = '12345'
+    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://jack:jack@localhost/pizza'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+
 
     # UPLOADED_PHOTOS_DEST ='app/static/photos'
 
@@ -19,17 +22,19 @@ class Config:
 
 
 class ProdConfig(Config):
+    pass
     
     # SQLALCHEMY_DATABASE_URL=os.environ.get("DATABASE_URL")
-    DATABASE_URI='postgresql+psycopg2://jack:jack@localhost/pizza'
+    # DATABASE_URI='postgresql+psycopg2://jack:jack@localhost/pizza'
 
 
 
 
 class DevConfig(Config):
     
+    
     # SQLALCHEMY_DATABASE_URL=os.environ.get("DATABASE_URL")
-    DATABASE_URI='postgresql+psycopg2://jack:jack@localhost/pizza'
+    # DATABASE_URI='postgresql+psycopg2://jack:jack@localhost/pizza'
 
 
     DEBUG = True
